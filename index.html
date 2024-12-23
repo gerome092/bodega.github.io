@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Fuerte Temporal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="safe">
+            <h1>Caja Fuerte Temporal</h1>
+            
+            <div id="createSection" class="section">
+                <h2>Crear Nuevo Secreto</h2>
+                <textarea id="secretMessage" placeholder="Escribe tu mensaje secreto aquí..."></textarea>
+                <div class="datetime-input">
+                    <label for="unlockDateTime">Fecha y hora de apertura:</label>
+                    <input type="datetime-local" id="unlockDateTime">
+                </div>
+                <button id="saveButton">Guardar en Caja Fuerte</button>
+            </div>
+
+            <div id="viewSection" class="section hidden">
+                <h2>Tu Secreto</h2>
+                <div id="lockStatus" class="status-locked">
+                    <span id="statusText">BLOQUEADO</span>
+                    <div id="countdown"></div>
+                </div>
+                <div id="secretContent" class="hidden">
+                    <h3>Mensaje:</h3>
+                    <p id="savedMessage"></p>
+                </div>
+                <button id="newSecretButton" class="hidden">Crear Nuevo Secreto</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
